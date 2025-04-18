@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const sumOfdigitOfNumber = (sum) => {
+        const nice = String(sum);
+
+        const str = nice.split("");
+
+        console.log("str",str);
+
+        let sumAll = 0;
+        for ( let i = 0; i < str.length; i++) {
+            sumAll += parseInt(str[i],10);
+        }
+
+        console.log("sum",sumAll);
+
+      };
+
+      sumOfdigitOfNumber(987);
+
+    </script>
+  </body>
+</html>
