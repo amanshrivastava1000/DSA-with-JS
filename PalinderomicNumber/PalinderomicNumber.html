@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 121 → reversed = 121 →  Palindrome
+        1331 → reversed = 1331 → Palindrome
+       
+        123 → reversed = 321 →  Not a palindrome
+       
+        10 → reversed = 01 →  Not a palindrome -->
+
+    <script>
+
+
+      const palindromic = (num) => {
+ 
+        const original = String(num);
+        const reversed = original.split("").reverse().join("");
+
+        // console.log("original",original);
+        // console.log("reversed",reversed);
+
+        if (original === reversed) {
+          console.log("number is palindromic");
+        } else {
+          console.log("number is not palindromic");
+        }
+      };
+
+      palindromic(121);
+
+
+    </script>
+  </body>
+</html>
