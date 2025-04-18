@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   const reverseTheNumber = (num) => {
+      //     const reverNumber = String(num).split("").reverse();
+
+      //     for (let i = 0; i < reverNumber.length; i++) {
+      //       const ans = parseInt(reverNumber[i], 10);
+      //       console.log("ans", ans);
+      //     }
+      //   };
+
+      //   reverseTheNumber(1234);
+
+      const reverseTheNumber = (num) => {
+        const reversed = parseInt(String(num).split("").reverse().join(""), 10);
+        console.log("Reversed number:", reversed);
+      };
+
+      reverseTheNumber(1234); // Output: Reversed number: 4321
+
+      
+    </script>
+  </body>
+</html>
