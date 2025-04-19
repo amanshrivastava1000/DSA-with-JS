@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Break the number 145 into digits: -->
+    <!-- 1 → factorial = 1! = 1
+
+    4 → factorial = 4! = 24
+    
+    5 → factorial = 5! = 120 -->
+
+    <!-- 1 + 24 + 120 = 145 -->
+
+    <!-- So, 145 is a Strong Number. -->
+
+    <!-- If the sum equals the original number → it's Strong. -->
+
+    <script>
+      // Function to calculate factorial of a single digit
+      const factorial = (n) => {
+        let result = 1;
+        for (let i = 1; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      };
+
+      const strongerNumber = (num) => {
+        const digits = String(num).split("").map(Number);
+
+        // Sum of factorials of each digit
+        let sum = 0;
+        for (let i = 0; i < digits.length; i++) {
+          sum += factorial(digits[i]);
+        }
+
+        // Compare sum to original number
+        if (sum === num) {
+          console.log(num + " is a Strong number");
+        } else {
+          console.log(num + " is NOT a Strong number");
+        }
+      };
+
+      strongerNumber(145); // m 145 is a Strong number
+    </script>
+  </body>
+</html>
