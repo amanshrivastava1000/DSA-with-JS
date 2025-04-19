@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Take the number 6.
+
+Divisors (excluding 6): 1, 2, 3
+Sum: 1 + 2 + 3 = 6
+
+So 6 is also a perfect number. -->
+
+    <script>
+      const checkIsPerfect = (num, i) => {
+        if (num % i === 0) {
+          return i;
+        }
+        return null;
+      };
+
+      const perfectNumber = (num) => {
+        let sum = 0;
+        for (let i = 1; i < num; i++) {
+          const result = checkIsPerfect(num, i);
+          if (result !== null) {
+            sum += result;
+          }
+        }
+        // console.log("sum", sum);
+        if (sum === num) {
+          console.log("its a perfect number");
+        } else {
+          console.log("its not  a perfect number");
+        }
+      };
+
+      perfectNumber(6);
+    </script>
+  </body>
+</html>
