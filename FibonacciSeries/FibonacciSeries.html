@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- this is series in which next number is the sum of two previous number -->
+
+    <!-- 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ... -->
+
+    <script>
+      function fibonacciSeries(n) {
+        let a = 0,
+          b = 1;
+
+        for (let i = 0; i < n; i++) {
+          console.log(a); // Print current value
+          let next = a + b; // Calculate next value
+          a = b; // Move to next
+          b = next;
+        }
+      }
+
+      // Example usage:
+      fibonacciSeries(7); // Output: 0 1 1 2 3 5 8
+    </script>
+  </body>
+</html>

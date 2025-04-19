@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // You’ll be given a number, like n = 5, and you need to multiply all the numbers from 1 to 5 together to get the result.
+
+      function factorial(n) {
+        let result = 1;
+
+        for (let i = 1; i <= n; i++) {
+          result *= i;
+        }
+
+        console.log("Factorial of", n, "is", result);
+      }
+
+      factorial(5); // Output: Factorial of 5 is 120
+    </script>
+  </body>
+</html>
