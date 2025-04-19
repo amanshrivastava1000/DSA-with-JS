@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Let’s take the number 12.
+
+Now, check which numbers divide 12 completely (i.e., 12 % number === 0): -->
+
+    <!-- So, the factors of 12 are: 1, 2, 3, 4, 6, 12 -->
+
+    <script>
+
+        
+      const factor = (num, i) => {
+        if (num % i === 0) {
+          return i;
+        }
+        return null; // optional: return null if it's not a factor
+      };
+
+      const factorOfNumber = (num) => {
+        for (let i = 1; i <= num; i++) {
+          const result = factor(num, i);
+          if (result !== null) {
+            console.log("Factor:", result);
+          }
+        }
+      };
+
+      factorOfNumber(12);
+    </script>
+  </body>
+</html>
