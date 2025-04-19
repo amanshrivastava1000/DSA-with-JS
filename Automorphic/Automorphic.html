@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 5 × 5 = 25 → ends with 5 →  Automorphic
+
+6 × 6 = 36 → ends with 6 →  Automorphic
+
+76 × 76 = 5776 → ends with 76 →  Automorphic -->
+
+    <script>
+      function isAutomorphic(num) {
+        const square = num * num;
+        const numStr = num.toString();
+        const squareStr = square.toString();
+
+        // console.log("squareStr",squareStr);
+        // console.log("numStr",numStr);
+        
+        if (squareStr.endsWith(numStr)) {
+          console.log(`${num} is an Automorphic Number ✅`);
+        } else {
+          console.log(`${num} is NOT an Automorphic Number ❌`);
+        }
+      }
+
+      isAutomorphic(5);
+    //   isAutomorphic(6);
+    //   isAutomorphic(76);
+    //   isAutomorphic(233);
+    </script>
+  </body>
+</html>
