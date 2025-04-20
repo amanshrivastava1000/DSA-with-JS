@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 
+    Proper divisors of 220: 1, 2, 4, 5, 10, 11, 20, 22, 44, 55, 110 → sum = 284
+
+Proper divisors of 284: 1, 2, 4, 71, 142 → sum = 220 -->
+
+<!-- Since the sum of divisors of 220 is 284, and sum of divisors of 284 is 220,
+  220 and 284 form a Friendly Pair. -->
+
+    <script>
+      function getDivisorSum(num) {
+        let sum = 0;
+        for (let i = 1; i < num; i++) {
+          if (num % i === 0) {
+            sum += i;
+          }
+        }
+        return sum;
+      }
+
+      function isFriendlyPair(a, b) {
+        const sumA = getDivisorSum(a);
+        const sumB = getDivisorSum(b);
+
+        if (sumA === b && sumB === a) {
+          console.log(`${a} and ${b} are Friendly (Amicable) Pair`);
+        } else {
+          console.log(`${a} and ${b} are NOT a Friendly Pair`);
+        }
+      }
+
+      isFriendlyPair(220, 284); // ✅ Friendly Pair
+    </script>
+  </body>
+</html>
