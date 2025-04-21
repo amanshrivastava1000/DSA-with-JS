@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- finding repeating element in the array -->
+
+    <script>
+      const findRepeatingElements = (arr) => {
+        const frequency = {};
+        const repeating = [];
+
+        for (let i = 0; i < arr.length; i++) {
+          const element = arr[i];
+          if (frequency[element]) {
+            frequency[element] += 1;
+          } else {
+            frequency[element] = 1;
+          }
+        }
+
+        for (let key in frequency) {
+          if (frequency[key] > 1) {
+            repeating.push(Number(key));
+          }
+        }
+
+        console.log("Repeating Elements:", repeating);
+      };
+
+      findRepeatingElements([1, 2, 3, 2, 4, 5, 1, 6, 4]);
+    </script>
+  </body>
+</html>
