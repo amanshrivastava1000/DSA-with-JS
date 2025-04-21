@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Sort first half in ascending order and second half in descending  -->
+
+    <script>
+      const sortArray = (arr) => {
+        const mid = Math.floor(arr.length / 2);
+
+        const firstHalf = arr.slice(0, mid).sort((a, b) => a - b);
+        const secondHalf = arr.slice(0, mid).sort((a, b) => b - a);
+
+        const result = [...firstHalf, ...secondHalf];
+
+        console.log("result", result);
+      };
+
+      sortArray([8, 4, 6, 2, 9, 7]);
+    </script>
+  </body>
+</html>
