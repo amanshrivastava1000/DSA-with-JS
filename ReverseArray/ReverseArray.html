@@ -6,19 +6,18 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- calculate the sum of the array -->
-
     <script>
-      const calculate = (arr) => {
-        let sum = 0;
-        for (let i = 0; i < arr.length; i++) {
-          sum += arr[i];
-        };
+      const reverseArray = (arr) => {
+        const reversed = [];
 
-        console.log("sum", sum);
+        for (let i = arr.length - 1; i >= 0; i--) {
+          reversed.push(arr[i]);
+        }
+
+        return reversed;
       };
-      calculate([1, 2, 3, 4, 5]);
 
+      console.log(reverseArray([1, 2, 3, 4, 5])); 
     </script>
   </body>
 </html>
